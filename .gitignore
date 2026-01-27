@@ -1,0 +1,11 @@
+# Editors
+.vscode/
+
+# Mac/OSX
+.DS_Store
+
+# Linter
+.markdownlint.json
+
+# Large files
+papers/
