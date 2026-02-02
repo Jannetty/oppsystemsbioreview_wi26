@@ -34,7 +34,7 @@
 
 ### 2.1 Tissue shape can emerge when models impose cell-environment interactions (environment can be extracellular or intracellular, but interacting components are subcellular in size)
 
-In these models, the primary assumed dynamics are specified at the level of individual cells and their interactions with molecular intracellular and or extracellular environments. How cells sense, modify, and respond to their environments is explicitly encoded, while tissue-scale morphology is not prescribed.
+In these models, the imposed dynamics are at the level of individual cells and their interactions with molecular intracellular and or extracellular environments. Tissue-scale morphology is emergent.
 
 - **Johnson et al. — CNCC stream confinement**
   - **Model:** Hybrid agent-based model of migrating cells coupled to PDEs for molecular signaling fields.
@@ -63,13 +63,11 @@ In these models, the primary assumed dynamics are specified at the level of indi
 - **Model:** Vertex model incorporating subcellular actomyosin pulse dynamics
 - This paper shows that tissue-scale epithelial expansion and elongation can emerge from explicitly specified subcellular actomyosin dynamics, without imposing tissue-level growth or mechanical rules.
 
-Here,  Tissue shape emerges from the collective consequences of explicitly encoded cell–environment feedback rules.
-
 ---
 
 ### 2.2 Tissue shape can emerge when models impose spatial rules for cell–cell interaction
 
-In these models, the primary assumed dynamics are the structure of interactions across space. The model encodes how cells are coupled to one another at the tissue scale, while local cell responses and morphology emerge from that coupling.
+In these models, the imposed dynamics are the structure of cell interactions across space. The model encodes how cells are coupled to one another, while local cell responses and morphology emerge from that coupling.
 
 - **Manicka et al. — Bioelectric information integration in morphogenesis**
   - **Model:** Multiscale ODE model of bioelectric patterning with spatially coupled membrane voltage states.
@@ -96,13 +94,11 @@ In these models, the primary assumed dynamics are the structure of interactions 
 - **Model:** Minimal 2D Cellular Potts Model of neuromast regeneration with local, cell-type–specific proliferation switches.
 - This paper shows that organ-scale regeneration and homeostasis can emerge from strictly local cell–cell interactions, without global regulatory signals.
 
-Here, cellular decisions and tissue morphology emerge from how local dynamics are embedded within a larger spatial interaction structure.
-
 ---
 
 ### 2.3 Tissue shape can emerge when models impose tissue-scale physical dynamics
 
-In these models, the primary assumed dynamics are specified at the **tissue scale itself**, through laws governing growth, geometry, and mechanics. Cellular behaviors are abstracted or omitted, and morphology emerges from collective physical processes.
+In these models, the imposed dynamics are physical properties imposed at the tissue scale through laws governing growth, geometry, and mechanics. Cellular behaviors are abstracted or omitted, and morphology emerges from collective physical processes.
 
 - **Gill et al. — Divergent buckling patterns in gut morphogenesis**
   - **Model:** Continuum mechanical model of growing tissue without explicit cellular representation.
@@ -118,8 +114,6 @@ In these models, the primary assumed dynamics are specified at the **tissue scal
   - **Model:** Reaction–diffusion equations defined on deforming tissue surfaces.
   - This study demonstrates that evolving geometry alone can modulate signaling outcomes, even in the absence of explicit cell-based models.
   - Signal interpretation depends on the history of tissue deformation.
-
-Here morphology emerges from the evolution of tissues as physical systems in time.
 
 ---
 
@@ -145,6 +139,8 @@ Relatively short section highlighting opportunitiy and small amount of work that
 - As in the morphogenesis section, we organize these models by the **scale at which the disrupted coordinating dynamics are imposed**.
 
 ### 4.1  Age-related pathology can emerge when models disrupt imposed cell-environment interaction dynamics (environment can be extracellular or intracellular, but interacting components are subcellular in size)
+
+In these models, interactions between cells and extra and intracellular signals are imposed. The models enable assessment of how disrupting those interactions affects aging tissue health.
 
 - **Haase et al. — Multiscale cytokine interactions in muscle regeneration**
   - **Model:** Multiscale Cellular Potts Model coupled to spatially resolved cytokine fields and vascular remodeling.
@@ -177,21 +173,21 @@ Relatively short section highlighting opportunitiy and small amount of work that
 
 ### 4.2 Age-related pathology can emerge when models disrupt imposed rules for cellular senescent state timing
 
+In these models, cell state rules dictating cell behaviors are imposed along with criteria that specifies when a cell enters a certain state. These models enable analysis of how disrupting these state transitions impacts emergent tissue health
+
 - **Chandrasegaran et al. — Senescence in wound healing**
   - **Model:** Hybrid agent-based model of wound healing with senescent cell states coupled to tissue-level repair dynamics.
   - This paper shows that senescence can either promote regeneration or drive pathological outcomes depending on when and where senescent cells arise.
-
-Aging-related pathology can emerge from mistimed coordination of otherwise normal mechanisms, rather than from fundamentally new biological processes.
 
 ---
 
 ### 4.3 Population-level aging can emerge when models disrupt how intracellular fate rules interact with population-level selection
 
+In these models, rules determining which cells persist in a population are imposed. These models enable analysis of the emergent consequences of cell persistence regemes in the context of aging tissue.
+
 - **Rat et al. — Telomere-driven senescence in yeast**
   - **Model:** Stochastic, lineage-resolved population model linking telomere dynamics to cellular fate decisions and population growth.
   - This paper shows that replicative senescence emerges from misalignment across intracellular, cellular, and population scales, rather than from a single molecular trigger.
-
-Aging can emerge from desynchronization between molecular clocks, cellular decision-making, and population-level selection, even when underlying mechanisms remain unchanged.
 
 ---
 
