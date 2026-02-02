@@ -24,28 +24,23 @@
 
 ---
 
-## 2. Morphogenesis: How Robust Shape Emerges from Multiscale Coordination
+## 2. Morphogenesis: Shape Emerges from Multiscale Coordination
 
-- The studies in this section use multiscale models to address a central question in developmental biology: **Where does the information that stabilizes tissue shape reside?**
-- Here, *stability* refers to a tissue’s ability to reliably form and maintain coherent structure despite variability, noise, and stochasticity at molecular and cellular scales. Stability reflects where in the system information is stored that allows form to persist, self-correct, or recover following perturbation.
-- Recent multiscale modeling work shows that this stabilizing information resides across scales.
+- In all computational models, certain dynamics are imposed.
+  - These imposed dynamics constitute the model’s assumptions. Other features of the system, including large-scale tissue form, may then emerge from the interaction of these assumed dynamics.
+- Here, we organize these models using an interpretive lens: **At what biological scale does the model impose asssumed organizing dynamics, and at what scale is tissue shape allowed to emerge from those assumptions?**
 
 ---
 
-### 2.1 Tissue shape can be stabilized by cells actively constructing their signaling environment
+### 2.1 Tissue shape can emerge when models impose cell-environment interactions (environment can be extracellular or intracellular, but interacting components are subcellular in size)
 
-In these models, stability is not imposed externally but emerges because cells continuously remodel the molecular fields that guide their own behavior.
+In these models, the primary assumed dynamics are specified at the level of individual cells and their interactions with molecular intracellular and or extracellular environments. How cells sense, modify, and respond to their environments is explicitly encoded, while tissue-scale morphology is not prescribed.
 
 - **Johnson et al. — CNCC stream confinement**
   - **Model:** Hybrid agent-based model of migrating cells coupled to PDEs for molecular signaling fields.
   - This paper shows that large-scale tissue organization during early vertebrate development can emerge because cells actively construct the constraints that stabilize their collective behavior.
-    - Migrating cells both *sense* and *reshape* their signaling environment:
-      - Cells move toward attractant cues (VEGF) that they locally sculpt by degrading the signal as they migrate.
-      - Cells remove inhibitory signals (Dan), creating spatial “memory” that alters future migration speed and organization.
-    - Molecular fields in turn regulate collective cell behavior by:
-      - Modulating speed (Dan),
-      - Promoting cohesion and directional alignment (Trail, Colec12),
-      - Establishing leader–follower organization (VEGF).
+    - Migrating cells both *sense* and *reshape* their signaling environment
+    - Molecular fields in turn regulate collective cell behavior
   - Stable stream confinement, coherence, and controlled inter-stream exchange emerge without imposed geometric barriers or predefined boundaries.
 
 - **Kaity & Lobo — Emergent stable tissue shapes from morphogen–growth feedback**
@@ -53,63 +48,85 @@ In these models, stability is not imposed externally but emerges because cells c
   - This paper shows that stable tissue and organ shapes can emerge when patterning signals and tissue growth are coupled in a closed feedback loop.
     - Morphogen distributions regulate local growth rates and directional expansion.
     - Tissue growth and deformation, in turn, advect, dilute, and reshape morphogen fields.
-    - Shape evolution is therefore dynamic rather than prescribed, and stability arises only when this reciprocal coupling is intact.
-  - When morphogen–growth feedback is disrupted, tissues fail to converge on stable forms despite unchanged molecular rules.
+  - Shape evolution is dynamic rather than prescribed, and stable shape arises only when this reciprocal coupling is intact.
+    - When morphogen–growth feedback is disrupted, tissues fail to converge on stable forms despite unchanged molecular rules.
 
-In these systems, stabilizing information resides in the dynamically maintained signaling environment that cells themselves construct. Shape persists because cells continually reinforce the constraints that guide their collective organization.
+- **Venturini & Sáez — A multiscale clutch model for adhesion complex mechanics**
+  - **Model:** Multiscale model imposing subcellular mechanical interaction rules for adhesion complexes and force transmission.
+  - This paper shows that coordinated cellular mechanical behavior can emerge from explicitly specified rules governing how cells interact with their subcellular mechanical environment.
+    - The model encodes molecular-scale clutch dynamics, including binding, unbinding, and force-dependent unfolding within adhesion complexes.
+    - Cell-scale traction forces, adhesion stability, and mechanosensitive responses are not prescribed, but emerge from the integration of many subcellular interactions.
+    - Altering molecular interaction rules propagates upward to change collective cellular force generation.
+  - Here, tissue-relevant mechanical coordination emerges from imposed subcellular interaction dynamics, rather than from assumed tissue-scale mechanics.
+
+- **Li et al - Basal actomyosin pulses expand epithelium coordinating cell flattening and tissue elongation**
+- **Model:** Vertex model incorporating subcellular actomyosin pulse dynamics
+- This paper shows that tissue-scale epithelial expansion and elongation can emerge from explicitly specified subcellular actomyosin dynamics, without imposing tissue-level growth or mechanical rules.
+
+Here,  Tissue shape emerges from the collective consequences of explicitly encoded cell–environment feedback rules.
 
 ---
 
-### 2.2 Tissue shape can be stabilized by cellular interpretation of distributed spatial patterns
+### 2.2 Tissue shape can emerge when models impose spatial rules for cell–cell interaction
 
-In these models, stability is not tied to local signal values or explicit boundary construction, but to how cells interpret distributed spatial patterns across the tissue.
+In these models, the primary assumed dynamics are the structure of interactions across space. The model encodes how cells are coupled to one another at the tissue scale, while local cell responses and morphology emerge from that coupling.
 
 - **Manicka et al. — Bioelectric information integration in morphogenesis**
   - **Model:** Multiscale ODE model of bioelectric patterning with spatially coupled membrane voltage states.
   - This paper shows that morphogenetic outcomes depend on how cells interpret tissue-wide bioelectric patterns rather than absolute local voltages.
     - Cells respond to relative voltage differences, spatial gradients, and pattern-wide context.
     - Perturbations that preserve local voltages but alter spatial organization produce distinct developmental outcomes.
-  - Stability arises because cells decode distributed electrical patterns that persist despite local variability.
+  - Shape arises because cells decode distributed electrical patterns that persist despite local variability.
 
 - **Berkemeier & Page — Coupling dynamics of 2D Notch–Delta signaling**
   - **Model:** Deterministic ODEs for Notch–Delta signaling on spatial lattices with varying coupling structure.
   - This paper demonstrates that emergent tissue patterns are governed by the structure of spatial coupling between cells, not by local signaling kinetics alone.
     - Identical intracellular dynamics yield qualitatively different outcomes under different coupling architectures.
-  - Pattern stability is therefore determined by interaction structure across the tissue.
+  - Pattern stability is determined by interaction structure across the tissue.
 
-Here, stabilizing information is carried by tissue-wide spatial patterns and coupling architecture, which guide cell behavior even when local signals are noisy or ambiguous.
+- **Urcun et al. — Contact inhibition of locomotion in fibroblast scratch assays**
+  - **Model:** Cellular Potts model imposing contact-dependent interaction and motility rules calibrated to scratch assay data.
+  - This paper shows that collective wound closure dynamics can be explained by explicitly specified rules governing how cells respond to contact with neighbors.
+    - The model encodes contact inhibition of locomotion (CIL) as a surface-dependent interaction rule that modulates cell motility.
+    - Cell shape, migration trajectories, and wound closure rates emerge from these imposed cell–cell interaction rules.
+    - Loss of CIL is sufficient to reproduce pathological keloid-like migration behavior without introducing new cellular mechanisms.
+  - Pathological tissue-scale behavior thus emerges from altered coordination rules at the level of cell–cell interactions, rather than from changes in intrinsic cell motility or tissue mechanics.
+
+**Lavalle et al. - Local control of cellular proliferation underlies neuroblast regeneration in zebrafish**
+- **Model:** Minimal 2D Cellular Potts Model of neuromast regeneration with local, cell-type–specific proliferation switches.
+- This paper shows that organ-scale regeneration and homeostasis can emerge from strictly local cell–cell interactions, without global regulatory signals.
+
+Here, cellular decisions and tissue morphology emerge from how local dynamics are embedded within a larger spatial interaction structure.
 
 ---
 
-### 2.3 Tissue shape can be stabilized by convergence onto tissue-scale dynamical regimes
+### 2.3 Tissue shape can emerge when models impose tissue-scale physical dynamics
 
-In these models, stability emerges at the tissue scale itself through collective dynamics driven by growth, geometry, and physical constraint. Shape is stabilized not by cellular interpretation or local rules, but by convergence onto specific large-scale behaviors of the system.
+In these models, the primary assumed dynamics are specified at the **tissue scale itself**, through laws governing growth, geometry, and mechanics. Cellular behaviors are abstracted or omitted, and morphology emerges from collective physical processes.
 
 - **Gill et al. — Divergent buckling patterns in gut morphogenesis**
   - **Model:** Continuum mechanical model of growing tissue without explicit cellular representation.
   - This paper shows that distinct, robust organ-scale patterns arise through growth–geometry feedback that selects between buckling regimes.
-    - The same growth processes yield different morphologies depending on tissue geometry.
-    - Pattern selection does not require fine-tuned material parameters.
-  - Stability reflects convergence onto a particular tissue-scale dynamical mode.
+    - The same growth processes yield different morphologies depending on tissue geometry and resulting tissue mechanical properties.
+  - Stable shape reflects convergence onto a particular tissue-scale dynamical mode.
 
 - **De Santis et al. — Crosstalk between tissue mechanics and morphogen signaling**
   - **Model:** Multiscale model coupling morphogen signaling with tissue geometry and tension during gastrulation.
   - This work shows that tissue shape and mechanical state actively regulate how morphogen signals are interpreted.
-  - Morphogen-only models fail unless tissue-scale geometry and tension are included as regulatory variables.
 
 - **Duteil et al. — Signaling on evolving tissue geometries**
   - **Model:** Reaction–diffusion equations defined on deforming tissue surfaces.
   - This study demonstrates that evolving geometry alone can modulate signaling outcomes, even in the absence of explicit cell-based models.
   - Signal interpretation depends on the history of tissue deformation.
 
-**In these systems, stabilizing information resides in tissue-scale dynamical regimes**, where geometry and growth constrain the space of possible outcomes and enforce reproducible form.
+Here morphology emerges from the evolution of tissues as physical systems in time.
 
 ---
 
-### Section synthesis: Stability in morphogenesis can reside at multiple organizational levels
+### Section synthesis: Multiscale models enable the study of morphogenesis across organizational scales
 
-- These studies show that robust morphogenesis does not rely on a single stabilizing mechanism.
-- By making these distinctions explicit, multiscale models reveal not only how tissues form, but where stabilizing information is stored, providing a foundation for understanding how similar developmental programs fail when coordination across scales breaks down in disease or aging.
+- These studies show that multiscale modeling provides a common framework for studying morphogenesis, regardless of whether the primary organizing dynamics are specified at the molecular, cellular, or tissue scale.
+- By explicitly representing interactions across scales, multiscale models make it possible to compare systems with very different assumed dynamics and to analyze how tissue-level shape emerges from those assumptions through coordinated cross-scale interactions.
 
 ---
 
@@ -119,14 +136,46 @@ Relatively short section highlighting opportunitiy and small amount of work that
 
 ---
 
-## 4. Aging & Senescence: Multiscale Desynchronization as a Failure Mode
+## 4. Aging & Senescence: Pathology Emerges from Multiscale Desynchronization
 
-- Aging emerges when existing biological processes fall out of sync across time, space, interaction structure, or population dynamics.
+- In aging and senescence-related disease, biological processes that are individually functional can become pathological when their coordination across time, space, interactions, or population structure breaks down.
+- In computational models, these forms of coordination must be explicitly specified in order to study how their disruption gives rise to disease. Aging phenotypes then emerge from how coordination disruptions propagate across biological scales.
 - The studies in this section use multiscale modeling to address a central question:
-  **How does coordinated biological function break down across scales to produce aging and senescence-related disease?**
-- The subsections below organize aging and senescence models by the primary mode of multiscale desynchronization, highlighting where coordination fails and how that failure propagates across scales to generate aging phenotypes.
+  **What coordination disruptions can cause age-related pathology to emerge, and how do those disruptions propagate across the system?**
+- As in the morphogenesis section, we organize these models by the **scale at which the disrupted coordinating dynamics are imposed**.
 
-### 4.1 Timing mismatches in senescent state transitions can drive age-related pathology
+### 4.1  Age-related pathology can emerge when models disrupt imposed cell-environment interaction dynamics (environment can be extracellular or intracellular, but interacting components are subcellular in size)
+
+- **Haase et al. — Multiscale cytokine interactions in muscle regeneration**
+  - **Model:** Multiscale Cellular Potts Model coupled to spatially resolved cytokine fields and vascular remodeling.
+  - This paper shows that regeneration outcomes cannot be predicted from the behavior of individual cytokines, but instead depend on their combined interaction structure.
+  - THIS PAPER DOES NOT TALK ABOUT AGING JUST REGENERATION so we will have to frame regeneration as something aging researchers should be concerned about (which makes sense, along the lines of wound healing really)
+
+- **Weathered et al. — Microglial control of amyloid plaque dynamics**
+  - **Model:** Spatial agent-based model of microglial behavior coupled to diffusive and aggregating Aβ species.
+  - This paper shows that immune effectiveness in combating Alzheimer's disease depends on where and when immune actions occur, not simply on their intensity.
+
+- **Thapa et al. - Senescent mesothelial matrix promotes ovarian cancer colonization**
+  - **Model:** Multiscale CPM of mesothelial-cancer cell interactions coupled to experimentally measured changes in extracellular matrix composition.
+  - This paper shows that age- or therapy-induced senescence can primite metastatic invasion by altering how cells interact with their microenvironment rather than by changing cancer cell intrinsic properties
+    - Senescence mesothelial cells alter extracellular matrix
+    - Mactrix changes increase cancer cell adhesion
+  - Pathological tissue-scale invalsion emerges from disrupted coordination between cell state (senescence), ECM conposition, and cell-cell interaction rules rather  than from increase oncofenic signaling alone.
+
+- **Haga et al. - Feedback-driven bistability in TGF-β signaling underlies skin aging**
+- **Model:** ODE model of TGF-β/VEGF signaling
+- This paper shows that cellular senescence can emerge from imposed intracellular signaling logic that creates irreversible state transitions rather than from cumulative damage alone
+  - ODE model of feedback system is bistable
+- Aging emerges from misaligned signal-response dynamics within cells
+
+- **Lazebnik & Friedman _ Spatio-temporal modeling of senescence-aware combination therapy in metastatic prostate cancer**
+- **Model:** PDE coupling tumor cell populations, senescent cells, immune dynamics, angiogenesis and drug pharmacokinetics
+- This paper demonstrates that therapy-induced senescence can destabilize coordinated cell-signal interactions producing treatment resistence and accelerated disease progression
+- Disease progression emerges from misalignment between cell fate decisions and tissue-level signaling dynamics
+
+---
+
+### 4.2 Age-related pathology can emerge when models disrupt imposed rules for cellular senescent state timing
 
 - **Chandrasegaran et al. — Senescence in wound healing**
   - **Model:** Hybrid agent-based model of wound healing with senescent cell states coupled to tissue-level repair dynamics.
@@ -136,28 +185,11 @@ Aging-related pathology can emerge from mistimed coordination of otherwise norma
 
 ---
 
-### 4.2 Altered interaction structures, rather than single drivers, can drive age-related pathology
-
-- **Haase et al. — Multiscale cytokine interactions in muscle regeneration**
-  - **Model:** Multiscale Cellular Potts Model coupled to spatially resolved cytokine fields and vascular remodeling.
-  - This paper shows that regeneration outcomes cannot be predicted from the behavior of individual cytokines, but instead depend on their combined interaction structure.
-  - THIS PAPER DOES NOT TALK ABOUT AGING JUST REGENERATION so we will have to frame regeneration as something aging researchers should be concerned about (which makes sense, along the lines of wound healing really)
-
----
-
-### 4.3 Spatial miscoordination of cellular actions can drive age-related pathology
-
-- **Weathered et al. — Microglial control of amyloid plaque dynamics**
-  - **Model:** Spatial agent-based model of microglial behavior coupled to diffusive and aggregating Aβ species.
-  - This paper shows that immune effectiveness in combating Alzheimer's disease depends on where and when immune actions occur, not simply on their intensity.
-
----
-
-### 4.4 Population-level aging emerges from accumulation of cross-scale variability
+### 4.3 Population-level aging can emerge when models disrupt how intracellular fate rules interact with population-level selection
 
 - **Rat et al. — Telomere-driven senescence in yeast**
   - **Model:** Stochastic, lineage-resolved population model linking telomere dynamics to cellular fate decisions and population growth.
-  - This paper shows that replicative senescence emerges from misalignment across molecular, cellular, and population scales, rather than from a single molecular trigger.
+  - This paper shows that replicative senescence emerges from misalignment across intracellular, cellular, and population scales, rather than from a single molecular trigger.
 
 Aging can emerge from desynchronization between molecular clocks, cellular decision-making, and population-level selection, even when underlying mechanisms remain unchanged.
 
