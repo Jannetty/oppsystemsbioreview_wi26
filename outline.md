@@ -36,14 +36,14 @@
 
 In these models, the imposed dynamics are at the level of individual cells and their interactions with molecular intracellular and or extracellular environments. Tissue-scale morphology is emergent.
 
-- **Johnson et al. — CNCC stream confinement**
+- **Johnson et al. — CNCC stream confinement** [[johnson_2025_streamconfinementneuralcrestcells]]
   - **Model:** Hybrid agent-based model of migrating cells coupled to PDEs for molecular signaling fields.
   - This paper shows that large-scale tissue organization during early vertebrate development can emerge because cells actively construct the constraints that stabilize their collective behavior.
     - Migrating cells both *sense* and *reshape* their signaling environment
     - Molecular fields in turn regulate collective cell behavior
   - Stable stream confinement, coherence, and controlled inter-stream exchange emerge without imposed geometric barriers or predefined boundaries.
 
-- **Kaity & Lobo — Emergent stable tissue shapes from morphogen–growth feedback**
+- **Kaity & Lobo — Emergent stable tissue shapes from morphogen–growth feedback** [[kaity_2026_emergentstabletissue]]
   - **Model:** Hybrid cell-based growth model coupled to PDEs for morphogen dynamics.
   - This paper shows that stable tissue and organ shapes can emerge when patterning signals and tissue growth are coupled in a closed feedback loop.
     - Morphogen distributions regulate local growth rates and directional expansion.
@@ -69,14 +69,14 @@ In these models, the imposed dynamics are at the level of individual cells and t
 
 In these models, the imposed dynamics are the structure of cell interactions across space. The model encodes how cells are coupled to one another, while local cell responses and morphology emerge from that coupling.
 
-- **Manicka et al. — Bioelectric information integration in morphogenesis**
+- **Manicka et al. — Bioelectric information integration in morphogenesis** [[manicka_2023_informationintegrationbioelectric.pdf]]
   - **Model:** Multiscale ODE model of bioelectric patterning with spatially coupled membrane voltage states.
   - This paper shows that morphogenetic outcomes depend on how cells interpret tissue-wide bioelectric patterns rather than absolute local voltages.
     - Cells respond to relative voltage differences, spatial gradients, and pattern-wide context.
     - Perturbations that preserve local voltages but alter spatial organization produce distinct developmental outcomes.
   - Shape arises because cells decode distributed electrical patterns that persist despite local variability.
 
-- **Berkemeier & Page — Coupling dynamics of 2D Notch–Delta signaling**
+- **Berkemeier & Page — Coupling dynamics of 2D Notch–Delta signaling** [[berkemeier_2023_couplingdynamics2d]]
   - **Model:** Deterministic ODEs for Notch–Delta signaling on spatial lattices with varying coupling structure.
   - This paper demonstrates that emergent tissue patterns are governed by the structure of spatial coupling between cells, not by local signaling kinetics alone.
     - Identical intracellular dynamics yield qualitatively different outcomes under different coupling architectures.
@@ -100,17 +100,17 @@ In these models, the imposed dynamics are the structure of cell interactions acr
 
 In these models, the imposed dynamics are physical properties imposed at the tissue scale through laws governing growth, geometry, and mechanics. Cellular behaviors are abstracted or omitted, and morphology emerges from collective physical processes.
 
-- **Gill et al. — Divergent buckling patterns in gut morphogenesis**
+- **Gill et al. — Divergent buckling patterns in gut morphogenesis** [[gill_2024_developmentalmechanicsdivergent]]
   - **Model:** Continuum mechanical model of growing tissue without explicit cellular representation.
   - This paper shows that distinct, robust organ-scale patterns arise through growth–geometry feedback that selects between buckling regimes.
     - The same growth processes yield different morphologies depending on tissue geometry and resulting tissue mechanical properties.
   - Stable shape reflects convergence onto a particular tissue-scale dynamical mode.
 
-- **De Santis et al. — Crosstalk between tissue mechanics and morphogen signaling**
+- **De Santis et al. — Crosstalk between tissue mechanics and morphogen signaling** [[desantis_2025_crosstalktissuemechanics]]
   - **Model:** Multiscale model coupling morphogen signaling with tissue geometry and tension during gastrulation.
   - This work shows that tissue shape and mechanical state actively regulate how morphogen signals are interpreted.
 
-- **Duteil et al. — Signaling on evolving tissue geometries**
+- **Duteil et al. — Signaling on evolving tissue geometries** [[duteil_2025_computationalframeworkstudy]]
   - **Model:** Reaction–diffusion equations defined on deforming tissue surfaces.
   - This study demonstrates that evolving geometry alone can modulate signaling outcomes, even in the absence of explicit cell-based models.
   - Signal interpretation depends on the history of tissue deformation.
@@ -142,12 +142,12 @@ Relatively short section highlighting opportunitiy and small amount of work that
 
 In these models, interactions between cells and extra and intracellular signals are imposed. The models enable assessment of how disrupting those interactions affects aging tissue health.
 
-- **Haase et al. — Multiscale cytokine interactions in muscle regeneration**
+- **Haase et al. — Multiscale cytokine interactions in muscle regeneration** [[haase_2024_multiscale_cytokines_muscle]]
   - **Model:** Multiscale Cellular Potts Model coupled to spatially resolved cytokine fields and vascular remodeling.
   - This paper shows that regeneration outcomes cannot be predicted from the behavior of individual cytokines, but instead depend on their combined interaction structure.
   - THIS PAPER DOES NOT TALK ABOUT AGING JUST REGENERATION so we will have to frame regeneration as something aging researchers should be concerned about (which makes sense, along the lines of wound healing really)
 
-- **Weathered et al. — Microglial control of amyloid plaque dynamics**
+- **Weathered et al. — Microglial control of amyloid plaque dynamics** [[weathered_2024_microglialrolesalzheimers]]
   - **Model:** Spatial agent-based model of microglial behavior coupled to diffusive and aggregating Aβ species.
   - This paper shows that immune effectiveness in combating Alzheimer's disease depends on where and when immune actions occur, not simply on their intensity.
 
@@ -181,7 +181,7 @@ In these models, interactions between cells and extra and intracellular signals 
 
 In these models, cell state rules dictating cell behaviors are imposed along with criteria that specifies when a cell enters a certain state. These models enable analysis of how disrupting these state transitions impacts emergent tissue health
 
-- **Chandrasegaran et al. — Senescence in wound healing**
+- **Chandrasegaran et al. — Senescence in wound healing** [[chandrasegaran_2024_senescencewoundhealing]]
   - **Model:** Hybrid agent-based model of wound healing with senescent cell states coupled to tissue-level repair dynamics.
   - This paper shows that senescence can either promote regeneration or drive pathological outcomes depending on when and where senescent cells arise.
 
@@ -191,7 +191,7 @@ In these models, cell state rules dictating cell behaviors are imposed along wit
 
 In these models, rules determining which cells persist in a population are imposed. These models enable analysis of the emergent consequences of cell persistence regemes in the context of aging tissue.
 
-- **Rat et al. — Telomere-driven senescence in yeast**
+- **Rat et al. — Telomere-driven senescence in yeast** [[rat2025_telomere_senescence]]
   - **Model:** Stochastic, lineage-resolved population model linking telomere dynamics to cellular fate decisions and population growth.
   - This paper shows that replicative senescence emerges from misalignment across intracellular, cellular, and population scales, rather than from a single molecular trigger.
 
