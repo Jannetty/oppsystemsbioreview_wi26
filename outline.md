@@ -20,7 +20,7 @@
 
 ### Multiscale models incorporate cross-level dependence
 
-- Here, we define spatiotemporal multiscale models as computational frameworks that couple biological processes across multiple levels of organization by explicitly representing their spatial structure, temporal dynamics, and reciprocal regulatory interactions.
+- Here, we define spatiotemporal multiscale models as ~computational frameworks~ that couple biological processes across multiple levels of organization by explicitly representing their spatial structure, temporal dynamics, and reciprocal regulatory interactions.
 
 ---
 
@@ -28,7 +28,7 @@
 
 - In all computational models, certain dynamics are imposed.
   - These imposed dynamics constitute the model’s assumptions. Other features of the system, including large-scale tissue form, may then emerge from the interaction of these assumed dynamics.
-- Here, we organize these models using an interpretive lens: **At what biological scale does the model impose asssumed organizing dynamics, and at what scale is tissue shape allowed to emerge from those assumptions?**
+- Here, we organize these models using an interpretive lens: **At what biological scale does the model impose asssumed organizing dynamics, and at what scale are emergent consequences of those assumptions impacting tissue shape?**
 
 ---
 
