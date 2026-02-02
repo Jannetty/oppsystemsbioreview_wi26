@@ -130,12 +130,12 @@ Relatively short section highlighting opportunitiy and small amount of work that
 
 ---
 
-## 4. Aging & Senescence: Pathology Emerges from Multiscale Desynchronization
+## 4. Senescence & Chronic Disease: Pathology Emerges from Multiscale Desynchronization
 
-- In aging and senescence-related disease, biological processes that are individually functional can become pathological when their coordination across time, space, interactions, or population structure breaks down.
+- In senescence-associated and chronic diseases, biological processes that are individually functional can become pathological when their coordination across time, space, interactions, or population structure breaks down.
 - In computational models, these forms of coordination must be explicitly specified in order to study how their disruption gives rise to disease. Aging phenotypes then emerge from how coordination disruptions propagate across biological scales.
 - The studies in this section use multiscale modeling to address a central question:
-  **What coordination disruptions can cause age-related pathology to emerge, and how do those disruptions propagate across the system?**
+  **What coordination disruptions can cause senescence-like or chronic pathology, and how do those disruptions propagate across the system?**
 - As in the morphogenesis section, we organize these models by the **scale at which the disrupted coordinating dynamics are imposed**.
 
 ### 4.1  Age-related pathology can emerge when models disrupt imposed cell-environment interaction dynamics (environment can be extracellular or intracellular, but interacting components are subcellular in size)
@@ -159,15 +159,21 @@ In these models, interactions between cells and extra and intracellular signals 
   - Pathological tissue-scale invalsion emerges from disrupted coordination between cell state (senescence), ECM conposition, and cell-cell interaction rules rather  than from increase oncofenic signaling alone.
 
 - **Haga et al. - Feedback-driven bistability in TGF-β signaling underlies skin aging**
-- **Model:** ODE model of TGF-β/VEGF signaling
-- This paper shows that cellular senescence can emerge from imposed intracellular signaling logic that creates irreversible state transitions rather than from cumulative damage alone
-  - ODE model of feedback system is bistable
-- Aging emerges from misaligned signal-response dynamics within cells
+  - **Model:** ODE model of TGF-β/VEGF signaling
+  - This paper shows that cellular senescence can emerge from imposed intracellular signaling logic that creates irreversible state transitions rather than from cumulative damage alone
+    - ODE model of feedback system is bistable
+  - Aging emerges from misaligned signal-response dynamics within cells
 
 - **Lazebnik & Friedman _ Spatio-temporal modeling of senescence-aware combination therapy in metastatic prostate cancer**
-- **Model:** PDE coupling tumor cell populations, senescent cells, immune dynamics, angiogenesis and drug pharmacokinetics
-- This paper demonstrates that therapy-induced senescence can destabilize coordinated cell-signal interactions producing treatment resistence and accelerated disease progression
-- Disease progression emerges from misalignment between cell fate decisions and tissue-level signaling dynamics
+  - **Model:** PDE coupling tumor cell populations, senescent cells, immune dynamics, angiogenesis and drug pharmacokinetics
+  - This paper demonstrates that therapy-induced senescence can destabilize coordinated cell-signal interactions producing treatment resistence and accelerated disease progression
+  - Disease progression emerges from misalignment between cell fate decisions and tissue-level signaling dynamics
+
+- **Li et al. — How the spleen reshapes and retains young and old red blood cells**
+- **Model:** Multiscale, particle-based mechanical model of red blood cells traversing spleen.
+- This paper shows that red blood cell maturation and senescent clearance emerge from imposed mechanical interaction rules between cells and the splenic microenvironment, rather than from intrinsic aging programs.
+  - Age-associated reductions in surface-to-volume ratio cause older cells to be retained or lysed under identical environmental conditions.
+- Senescent clearance emerges from misalignment between evolving cell mechanical state and fixed tissue-scale mechanical constraints, without requiring explicit molecular damage signals.
 
 ---
 
