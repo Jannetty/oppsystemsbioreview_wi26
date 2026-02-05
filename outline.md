@@ -53,7 +53,7 @@ In these models, the imposed dynamics are at the level of individual cells and t
     - When morphogen–growth feedback is disrupted, tissues fail to converge on stable forms despite unchanged molecular rules.
 
 - **Venturini & Sáez — A multiscale clutch model for adhesion complex mechanics** [[venturini_2023_multiscaleclutchadhesion]]
-  - **Model:** Multiscale model imposing subcellular mechanical interaction rules for adhesion complexes and force transmission. Cells are not directly modeled at all.
+  - **Model:** Multiscale model imposing subcellular mechanical interaction rules for adhesion complexes and force transmission.
   - This paper shows that coordinated cellular mechanical behavior can emerge from explicitly specified rules governing subcellular mechanical interactions.
     - The model encodes molecular-scale clutch dynamics, including binding, unbinding, and force-dependent unfolding within adhesion complexes.
     - Cell-scale traction forces, adhesion stability, and mechanosensitive responses are not prescribed, but emerge from the integration of many subcellular interactions.
