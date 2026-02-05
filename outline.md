@@ -53,22 +53,28 @@ In these models, the imposed dynamics are at the level of individual cells and t
     - When morphogen–growth feedback is disrupted, tissues fail to converge on stable forms despite unchanged molecular rules.
 
 - **Venturini & Sáez — A multiscale clutch model for adhesion complex mechanics** [[venturini_2023_multiscaleclutchadhesion]]
-  - **Model:** Multiscale model imposing subcellular mechanical interaction rules for adhesion complexes and force transmission.
-  - This paper shows that coordinated cellular mechanical behavior can emerge from explicitly specified rules governing subcellular mechanical interactions.
-    - The model encodes molecular-scale clutch dynamics, including binding, unbinding, and force-dependent unfolding within adhesion complexes.
-    - Cell-scale traction forces, adhesion stability, and mechanosensitive responses are not prescribed, but emerge from the integration of many subcellular interactions.
-    - Altering molecular interaction rules propagates upward to change collective cellular force generation.
-  - Here, tissue-relevant mechanical coordination emerges from imposed subcellular interaction dynamics, rather than from assumed tissue-scale mechanics.
+  - **Model:** Multiscale mechanochemical “clutch” model linking subcellular adhesion-complex dynamics to cell-scale force generation.
+  - This paper tests which molecular design features of adhesion complexes are sufficient to control cell-scale traction forces.
+    - The model explicitly encodes how integrins and talin-based adhesion complexes:
+      - Bind and unbind from the extracellular matrix
+      - Transmit force from actin to the substrate
+      - Undergo force-dependent unfolding that enables reinforcement
+    - The authors then perform systematic in silico perturbations to ask how cell-scale mechanics change when they vary:
+      - Integrin binding kinetics (comparing integrin types with different force–lifetime behavior),
+      - Extracellular matrix properties, including stiffness and ligand binding-site density/spacing.
+    - The key outputs are cell-scale observables such as:
+      - Traction force/stress
+      - Actin retrograde flow
+      - Adhesion engagement and stability.
+  - Here, cell-scale mechanical coordination emerges from explicitly specified subcellular force-transmission rules, demonstrating how tissue-relevant mechanics can be shaped by molecular-scale assumptions.
 
 - **Li et al - Basal actomyosin pulses expand epithelium coordinating cell flattening and tissue elongation**
-- **Model:** Vertex model incorporating subcellular actomyosin pulse dynamics
-- This paper shows that tissue-scale epithelial expansion and elongation can emerge from explicitly specified subcellular actomyosin dynamics, without imposing tissue-level growth or mechanical rules.
+  - **Model:** Vertex model incorporating subcellular actomyosin pulse dynamics
+  - This paper shows that tissue-scale epithelial expansion and elongation can emerge from explicitly specified subcellular actomyosin dynamics, without imposing tissue-level growth or mechanical rules.
 
 - **Berkhout et al. — In silico prediction of neural tube closure defects**
   - **Model:** Multiscale Cellular Potts / agent-based model of neural tube closure with an embedded gene regulatory network and diffusive morphogen gradients.
-  - This paper shows that successful neural tube closure—and specific defect phenotypes—can emerge from imposed cross-scale coupling between morphogen signaling, intracellular regulatory logic, and mechanically implemented cell behaviors.
-    - Cells carry a regulatory network that interprets gradients and triggers morphogenetic behaviors
-    - Tissue-scale closure dynamics and defect types arise from the integration of these local signal–response rules rather than from prescribed tissue-level deformation.
+  - This paper shows that successful neural tube closure (and specific defect phenotypes) can emerge from imposed cross-scale coupling between morphogen signaling, intracellular regulatory logic, and mechanically implemented cell behaviors.
   - The model supports probabilistic prediction of neural tube defects under synthetic gene perturbations, it presents multiscale modeling as a mechanistic bridge between gene-level disruption and morphogenetic failure.
 
 ---
@@ -82,7 +88,7 @@ In these models, the imposed dynamics are the structure of cell interactions acr
   - This paper shows that morphogenetic outcomes depend on how cells interpret tissue-wide bioelectric patterns rather than absolute local voltages.
     - Cells respond to relative voltage differences, spatial gradients, and pattern-wide context.
     - Perturbations that preserve local voltages but alter spatial organization produce distinct developmental outcomes.
-  - Shape arises because cells decode distributed electrical patterns that persist despite local variability.
+  - Shape arises because cells decode distributed electrical patterns that persist despite local variability (authors present the regulation of smaller scales by dynamics at larger scales as a mechanism for getting robust development in noisy environments).
 
 - **Berkemeier & Page — Coupling dynamics of 2D Notch–Delta signaling** [[berkemeier_2023_couplingdynamics2d]]
   - **Model:** Deterministic ODEs for Notch–Delta signaling on spatial lattices with varying coupling structure.
@@ -155,6 +161,10 @@ Gynopathology is a strong area of opportunity. Recent experimental work has gene
 - **Dutt et al. — Rheological transition driven by matrix makes cancer spheroids resilient under confinement**
   - **Model:** CPM modeling ovarian cancer spheroid morphology, ECM coating, and cell–cell adhesion in confined flow (with complementary experimental microfluidics platform).
   - This paper shows that metastatic spheroid survival in spatially confining microenvironments can emerge from imposed rules governing cell–cell adhesion and cell–ECM interactions, rather than from changes in intrinsic tumor aggressiveness.
+
+- **Koprinski et al. — Optimising chemotherapy for advanced high-grade serous ovarian cancer via delay-differential equations**
+  - **Model:** Multi-compartment delay-differential equation (DDE) model coupling tumor-site dynamics with tumor-draining lymph node immune activation and trafficking.
+  - This paper shows that treatment outcomes in ovarian cancer can emerge from coordination constraints imposed by delayed immune signaling and cross-compartment cell trafficking, not just from tumor-intrinsic growth and drug sensitivity.
 
 ---
 

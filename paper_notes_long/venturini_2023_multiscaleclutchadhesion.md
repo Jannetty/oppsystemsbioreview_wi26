@@ -38,7 +38,7 @@ This paper shows that cell-scale traction and adhesion stability emerge from exp
 ## Modeling framework
 
 - **Model type**: Stochastic multiscale clutch model (Gillespie), integrating molecular mechanics + cell-scale traction output
-- **Platform**: Custom
+- **Platform**: Custom (MATLAB, they uploaded .DS_Store files to their Zenodo so probably not comp sci people)
 - **Dimensionality**: Molecular chain scale + 2D substrate deformation (Green’s function elasticity)
 - **Cell types / agents**:
   - Not an explicit multicell model; the “system” is an adhesion complex (many parallel molecular chains)
@@ -58,11 +58,13 @@ This paper shows that cell-scale traction and adhesion stability emerge from exp
 ## Scales spanned and how they are coupled
 
 ### Molecular / subcellular scale
-  - Integrin molecules: modeled with force-dependent binding/unbinding (catch-bond behavior; with CMR for α5β1).
-  - Talin: 13-domain rod with domain-specific unfolding/refolding and nonlinear force–extension mechanics (FJC/WLC).  ￼
-  - Vinculin: recruited based on exposure of binding sites (via unfolding of key talin domains)
+
+- Integrin molecules: modeled with force-dependent binding/unbinding (catch-bond behavior; with CMR for α5β1).
+- Talin: 13-domain rod with domain-specific unfolding/refolding and nonlinear force–extension mechanics (FJC/WLC).  ￼
+- Vinculin: recruited based on exposure of binding sites (via unfolding of key talin domains)
 
 ### Cellular scale
+
 - The cell is represented implicitly via:
   - actomyosin retrograde flow
   - net traction force exerted on the ECM
@@ -81,6 +83,7 @@ This paper shows that cell-scale traction and adhesion stability emerge from exp
 ---
 
 ## Core multi-scale insights
+
 - Molecular-scale mechanics can be sufficient to reproduce cell-scale traction and retrograde flow trends, without imposing “effective” adhesion rules at the cellular scale.
   - Adhesion complex behavior depends on the interaction between:
   - ECM stiffness,
@@ -90,41 +93,29 @@ This paper shows that cell-scale traction and adhesion stability emerge from exp
 - A major contribution is showing that the same cell-scale traction outcome can arise from different molecular regimes, meaning that cell-level measurements alone may not uniquely identify the molecular mechanism.
 
 ---
-//TODO: finish
 
 ## Evidence & parameterization
 
-- **Data sources**: {In vivo / in vitro / imaging / literature}
-- **Calibration**: {Qualitative / quantitative / optimization-based}
-- **Validation**: {What patterns or metrics are matched}
-- **Robustness testing**: {Replicates, parameter sweeps, perturbations}
+- **Data sources**: experimental literature
+- **Calibration**: parameters taken from published experimental work and previous single-scale modeling work
+- **Validation**: agreement with known traction/velocity responses across ECM stiffnesses and agreement with known talin force-entension behavior
+- **Robustness testing**: sensitivity analysis over integrin kinetic parameters, variation of ligant spacing
 - **Limitations**:
-  - {Modeling simplifications}
-  - {Missing biology or geometry}
+  - no explicit multicell/tissue geometry
+  - assumes simplified force direction and bunding structure
+  - predictions about molecular states inside full adhesions are challenging to experimentally validate
 
 ---
 
 ## Conceptual contributions to multi-scale modeling
 
-- {What this paper teaches about *how* to build or think about multiscale models}
-- {New role for space, time, mechanics, or information}
-- {Methodological contribution (e.g., hypothesis testing, model selection)}
+- Case study in which multiscale means molecular mechanics + stochastic state transitions + emergent cellular physical environment
 
 ---
 
 ## Relevance to Health & Longevity
 
-- {Why this matters for healthy tissue function}
-- {How failure of the modeled coordination could relate to aging or disease}
-- {How this paper complements senescence / regeneration / cancer models}
-
----
-
-## Open questions
-
-- {Biological question left unanswered}
-- {Modeling extension or experimental test}
-- {Generalization to other tissues or diseases}
+- Adhesion mechanics are central to wound healing, fibrosis, tumor invasion, immune cell migration, and tissue aging via ECM stiffening
 
 ---
 
