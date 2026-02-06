@@ -37,14 +37,14 @@
 
 In these models, the imposed dynamics are at the level of individual cells and their interactions with molecular intracellular and or extracellular environments.
 
-- **Johnson et al. — CNCC stream confinement** [[johnson_2025_streamconfinementneuralcrestcells]]
+- **Johnson et al. — CNCC stream confinement** [[paper_notes_short/johnson_2025_streamconfinementneuralcrestcells]]
   - **Model:** Hybrid agent-based model of migrating cells coupled to PDEs for molecular signaling fields.
   - This paper shows that large-scale tissue organization during early vertebrate development can emerge because cells actively construct the constraints that stabilize their collective behavior.
     - Migrating cells both sense and reshape their signaling environment
     - Molecular fields in turn regulate collective cell behavior
   - Stable stream confinement, coherence, and controlled inter-stream exchange emerge without imposed geometric barriers or predefined boundaries.
 
-- **Kaity & Lobo — Emergent stable tissue shapes from morphogen–growth feedback** [[kaity_2026_emergentstabletissue]]
+- **Kaity & Lobo — Emergent stable tissue shapes from morphogen–growth feedback** [[paper_notes_short/kaity_2026_emergentstabletissue]]
   - **Model:** Hybrid cell-based growth model coupled to PDEs for morphogen dynamics.
   - This paper shows that stable tissue and organ shapes can emerge when patterning signals and tissue growth are coupled in a closed feedback loop.
     - Morphogen distributions regulate local growth rates and directional expansion.
@@ -52,7 +52,7 @@ In these models, the imposed dynamics are at the level of individual cells and t
   - Shape evolution is dynamic rather than prescribed, and stable shape arises only when this reciprocal coupling is intact.
     - When morphogen–growth feedback is disrupted, tissues fail to converge on stable forms despite unchanged molecular rules.
 
-- **Venturini & Sáez — A multiscale clutch model for adhesion complex mechanics** [[venturini_2023_multiscaleclutchadhesion]]
+- **Venturini & Sáez — A multiscale clutch model for adhesion complex mechanics** [[paper_notes_short/venturini_2023_multiscaleclutchadhesion]]
   - **Model:** Multiscale mechanochemical “clutch” model linking subcellular adhesion-complex dynamics to cell-scale force generation.
   - This paper tests which molecular design features of adhesion complexes are sufficient to control cell-scale traction forces.
     - The model explicitly encodes how integrins and talin-based adhesion complexes:
@@ -68,11 +68,11 @@ In these models, the imposed dynamics are at the level of individual cells and t
       - Adhesion engagement and stability.
   - Here, cell-scale mechanical coordination emerges from explicitly specified subcellular force-transmission rules, demonstrating how tissue-relevant mechanics can be shaped by molecular-scale assumptions.
 
-- **Li et al - Basal actomyosin pulses expand epithelium coordinating cell flattening and tissue elongation**
+- **Li et al - Basal actomyosin pulses expand epithelium coordinating cell flattening and tissue elongation** [[li_2024_basalactomyosinpulses]]
   - **Model:** Vertex model incorporating subcellular actomyosin pulse dynamics
   - This paper shows that tissue-scale epithelial expansion and elongation can emerge from explicitly specified subcellular actomyosin dynamics, without imposing tissue-level growth or mechanical rules.
 
-- **Berkhout et al. — In silico prediction of neural tube closure defects**
+- **Berkhout et al. — In silico prediction of neural tube closure defects** [[berkhout_2025_computationaldynamicsystems]]
   - **Model:** Multiscale Cellular Potts / agent-based model of neural tube closure with an embedded gene regulatory network and diffusive morphogen gradients.
   - This paper shows that successful neural tube closure (and specific defect phenotypes) can emerge from imposed cross-scale coupling between morphogen signaling, intracellular regulatory logic, and mechanically implemented cell behaviors.
   - The model supports probabilistic prediction of neural tube defects under synthetic gene perturbations, it presents multiscale modeling as a mechanistic bridge between gene-level disruption and morphogenetic failure.
@@ -83,20 +83,20 @@ In these models, the imposed dynamics are at the level of individual cells and t
 
 In these models, the imposed dynamics are the structure of cell interactions across space. The model encodes how cells are coupled to one another, while local cell responses and morphology emerge from that coupling.
 
-- **Manicka et al. — Bioelectric information integration in morphogenesis** [[manicka_2023_informationintegrationbioelectric.pdf]]
+- **Manicka et al. — Bioelectric information integration in morphogenesis** [[paper_notes_short/manicka_2023_informationintegrationbioelectric]]
   - **Model:** Multiscale ODE model of bioelectric patterning with spatially coupled membrane voltage states.
   - This paper shows that morphogenetic outcomes depend on how cells interpret tissue-wide bioelectric patterns rather than absolute local voltages.
     - Cells respond to relative voltage differences, spatial gradients, and pattern-wide context.
     - Perturbations that preserve local voltages but alter spatial organization produce distinct developmental outcomes.
   - Shape arises because cells decode distributed electrical patterns that persist despite local variability (authors present the regulation of smaller scales by dynamics at larger scales as a mechanism for getting robust development in noisy environments).
 
-- **Berkemeier & Page — Coupling dynamics of 2D Notch–Delta signaling** [[berkemeier_2023_couplingdynamics2d]]
+- **Berkemeier & Page — Coupling dynamics of 2D Notch–Delta signaling** [[paper_notes_short/berkemeier_2023_couplingdynamics2d]]
   - **Model:** Deterministic ODEs for Notch–Delta signaling on spatial lattices with varying coupling structure.
   - This paper demonstrates that emergent tissue patterns are governed by the structure of spatial coupling between cells, not by local signaling kinetics alone.
     - Identical intracellular dynamics yield qualitatively different outcomes under different coupling architectures.
   - Pattern stability is determined by interaction structure across the tissue.
 
-- **Urcun et al. — Contact inhibition of locomotion in fibroblast scratch assays**
+- **Urcun et al. — Contact inhibition of locomotion in fibroblast scratch assays** [[urcun_2026_simplecellularpotts]]
   - **Model:** Cellular Potts model imposing contact-dependent interaction and motility rules calibrated to scratch assay data.
   - This paper shows that collective wound closure dynamics can be explained by explicitly specified rules governing how cells respond to contact with neighbors.
     - The model encodes contact inhibition of locomotion (CIL) as a surface-dependent interaction rule that modulates cell motility.
