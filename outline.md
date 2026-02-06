@@ -103,25 +103,25 @@ In these models, the primary assumptions are encoded at the scale of tissues: gr
 
 - Multiscale models can show that tissue-scale mechanics can be sufficient to drive robust morphogenetic outcomes.
 
-  - **Gill et al. — Divergent buckling patterns in gut morphogenesis** [[gill_2024_developmentalmechanicsdivergent]]
+  - **Gill et al. — Divergent buckling patterns in gut morphogenesis** [[paper_notes_short/gill_2024_developmentalmechanicsdivergent]]
     - Shows that distinct organ-scale morphologies can emerge from the same growth program when tissue geometry and mechanical constraints place the system into different buckling regimes.
 
 - Multiscale models can treat tissue geometry as an active regulator of signaling rather than a passive outcome of signaling.
 
-  - **Duteil et al. — Signaling on evolving tissue geometries** [[duteil_2025_computationalframeworkstudy]]
+  - **Duteil et al. — Signaling on evolving tissue geometries** [[paper_notes_short/duteil_2025_computationalframeworkstudy]]
     - Shows that morphogen patterning outcomes chhanges when signaling unfolds on a deforming tissue surface, even when biochemical rules are unchanged.
 
-  - **De Santis et al. — Crosstalk between tissue mechanics and morphogen signaling** [[desantis_2025_crosstalktissuemechanics]]
+  - **De Santis et al. — Crosstalk between tissue mechanics and morphogen signaling** [[paper_notes_short/desantis_2025_crosstalktissuemechanics]]
     - Shows that morphogen interpretation depends on tissue mechanical state, so signaling-only models fail when geometry and tension are omitted.
 
 - Multiscale models can test whether correct morphogenesis requires time-resolved mechanical programs, not just static material assumptions.
 
-  - **Gomez et al. — Highly dynamic mechanical transitions in embryonic cell populations during Drosophila gastrulation**
+  - **Gomez et al. — Highly dynamic mechanical transitions in embryonic cell populations during Drosophila gastrulation** [[gomez_2025_highlydynamicmechanical]]
     - Shows that robust tissue folding depends on spatially localized, time-varying changes in cell/tissue material properties, meaning that timing of mechanical transitions can be a controlling variable.
 
 - Multiscale models can reveal that tissue-scale growth dynamics can generate long-range structure without explicitly encoding long-range coordination.
 
-  - **Fruleux et al. — Growth couples temporal and spatial fluctuations of tissue properties during morphogenesis** [[fruleux_2024_growthcouplestemporal]]
+  - **Fruleux et al. — Growth couples temporal and spatial fluctuations of tissue properties during morphogenesis** [[paper_notes_short/fruleux_2024_growthcouplestemporal]]
     - Shows that long-range spatial correlations in tissue growth can emerge from tissue-scale growth dynamics that convert temporal persistence into spatial structure.
 
 ---
@@ -134,19 +134,24 @@ In these models, the primary assumptions are encoded at the scale of tissues: gr
 
 ## 3. Gynopatholody: Spatiotemporal processes
 
-Gynopathology is a strong area of opportunity. Recent experimental work has generated spatial genomics and transcriptomics data, which has driven new hypotheses about drivers of gynopathologies ([DOI1](https://doi.org/10.1038/s41467-025-67492-z), [DOI2](https://doi.org/10.1038/s41467-022-28568-2), cite a review here probably too).
+- Spatial and temporal dynamics are increasingly recognized as central to the development and progression of gynopathologies such as endometriosis and ovarian cancer.
+  - Experimental spatial “omics” data are being generated to study these pathologies ([Nature Comms review], DOI:10.1038/s41467-025-67492-z; DOI:10.1038/s41467-022-28568-2)
+  - multiscale models offer complementary means to test mechanistic hypotheses about how coordination across scales contributes to disease onset, progression, and treatment outcomes.
+- Here we feature some modeling work and highlight this area of work as a high-impact opportunity for modelers.
 
-**Miller et al. — Innate immune surveillance as a bistable switch in endometriosis lesion onset**
-- **Model:** Compartmental ODE model of endometrial cell influx into peritoneal fluid coupled to macrophage and NK-cell detection and clearance dynamics.
-- This paper shows that endometriosis-like lesion onset can emerge from imposed immune surveillance rules that create bistability and hysteresis in early lesion dynamics.
+- **Miller et al. — Innate immune surveillance as a bistable switch in endometriosis lesion onset** [[miller_2025_mathematicalmodellingmacrophage]]
+  - Shows that multiscale models can be used to test whether lesion onset  in endometriosis reflects a threshold transition in immune surveillance, rather than a gradual accumulation of ectopic tissue.
+  - Shows how tissue-level pathology can emerge when otherwise normal processes (cell influx, clearance, inflammation) become misaligned in time.
 
-- **Dutt et al. — Rheological transition driven by matrix makes cancer spheroids resilient under confinement**
-  - **Model:** CPM modeling ovarian cancer spheroid morphology, ECM coating, and cell–cell adhesion in confined flow (with complementary experimental microfluidics platform).
-  - This paper shows that metastatic spheroid survival in spatially confining microenvironments can emerge from imposed rules governing cell–cell adhesion and cell–ECM interactions, rather than from changes in intrinsic tumor aggressiveness.
+- **Dutt et al. — Rheological transition driven by matrix makes cancer spheroids resilient under confinement** [[dutt_2025_rheologicaltransitiondriven]]
+  - Shows that multiscale models can link microenvironmental structure (ECM composition and mechanics) to emergent, tissue-relevant physical phenotypes such as ovarian cancer spheroid resilience under stress.
+  - Shows that ovarian cancer metastatic success can depend on a mechanically mediated coordination between cell collectives and their extracellular context.
 
-- **Koprinski et al. — Optimising chemotherapy for advanced high-grade serous ovarian cancer via delay-differential equations**
-  - **Model:** Multi-compartment delay-differential equation (DDE) model coupling tumor-site dynamics with tumor-draining lymph node immune activation and trafficking.
-  - This paper shows that treatment outcomes in ovarian cancer can emerge from coordination constraints imposed by delayed immune signaling and cross-compartment cell trafficking, not just from tumor-intrinsic growth and drug sensitivity.
+- **Koprinski et al. — Optimising chemotherapy for advanced high-grade serous ovarian cancer via delay-differential equations** [[koprinski_2026_optimisingchemotherapyadvanced]]
+  - Shows that multiscale models can function as in silico test beds for ovarian cancer treatment timing.
+  - Shows how therapeutic outcomes can emerge from coordination (or miscoordination) between tumor response, toxicity, and recovery timescales.
+
+Gynopathology modeling is a high-impact opportunity for modeling researchers.
 
 ---
 
