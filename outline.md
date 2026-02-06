@@ -35,82 +35,65 @@
 
 ### 2.1 Tissue shape can emerge when models impose cell–microenvironment interaction rules
 
-In these models, the imposed dynamics are at the level of individual cells and their interactions with molecular intracellular and or extracellular environments.
+In these models, the primary assumptions are encoded at the scale of individual cells interacting with local biochemical or mechanical context (intracellular cues, extracellular cues, ECM, or force subcellular transmission). Tissue-scale shape is then treated as an emergent consequence of these local rules.
 
-- **Johnson et al. — CNCC stream confinement** [[paper_notes_short/johnson_2025_streamconfinementneuralcrestcells]]
-  - **Model:** Hybrid agent-based model of migrating cells coupled to PDEs for molecular signaling fields.
-  - This paper shows that large-scale tissue organization during early vertebrate development can emerge because cells actively construct the constraints that stabilize their collective behavior.
-    - Migrating cells both sense and reshape their signaling environment
-    - Molecular fields in turn regulate collective cell behavior
-  - Stable stream confinement, coherence, and controlled inter-stream exchange emerge without imposed geometric barriers or predefined boundaries.
+- Multiscale models can replace externally imposed tissue constraints with mechanistic local interactions.
 
-- **Kaity & Lobo — Emergent stable tissue shapes from morphogen–growth feedback** [[paper_notes_short/kaity_2026_emergentstabletissue]]
-  - **Model:** Hybrid cell-based growth model coupled to PDEs for morphogen dynamics.
-  - This paper shows that stable tissue and organ shapes can emerge when patterning signals and tissue growth are coupled in a closed feedback loop.
-    - Morphogen distributions regulate local growth rates and directional expansion.
-    - Tissue growth and deformation advect, dilute, and reshape morphogen fields.
-  - Shape evolution is dynamic rather than prescribed, and stable shape arises only when this reciprocal coupling is intact.
-    - When morphogen–growth feedback is disrupted, tissues fail to converge on stable forms despite unchanged molecular rules.
+  - **Johnson et al. — CNCC stream confinement** [[paper_notes_short/johnson_2025_streamconfinementneuralcrestcells]]
+    - ABM + PDE fields. Shows stream confinement can emerge from local cue–cell feedbacks without artificial boundaries.
 
-- **Venturini & Sáez — A multiscale clutch model for adhesion complex mechanics** [[paper_notes_short/venturini_2023_multiscaleclutchadhesion]]
-  - **Model:** Multiscale mechanochemical “clutch” model linking subcellular adhesion-complex dynamics to cell-scale force generation.
-  - This paper tests which molecular design features of adhesion complexes are sufficient to control cell-scale traction forces.
-    - The model explicitly encodes how integrins and talin-based adhesion complexes:
-      - Bind and unbind from the extracellular matrix
-      - Transmit force from actin to the substrate
-      - Undergo force-dependent unfolding that enables reinforcement
-    - The authors then perform systematic in silico perturbations to ask how cell-scale mechanics change when they vary:
-      - Integrin binding kinetics (comparing integrin types with different force–lifetime behavior),
-      - Extracellular matrix properties, including stiffness and ligand binding-site density/spacing.
-    - The key outputs are cell-scale observables such as:
-      - Traction force/stress
-      - Actin retrograde flow
-      - Adhesion engagement and stability.
-  - Here, cell-scale mechanical coordination emerges from explicitly specified subcellular force-transmission rules, demonstrating how tissue-relevant mechanics can be shaped by molecular-scale assumptions.
+  - **Kaity & Lobo — Emergent stable tissue shapes from morphogen–growth feedback** [[paper_notes_short/kaity_2026_emergentstabletissue]]
+    - Center-based cell model + morphogen PDEs. Shows stable tissue shape can emerge from reciprocal coupling between growth and patterning.
 
-- **Li et al - Basal actomyosin pulses expand epithelium coordinating cell flattening and tissue elongation** [[li_2024_basalactomyosinpulses]]
-  - **Model:** Vertex model incorporating subcellular actomyosin pulse dynamics
-  - This paper shows that tissue-scale epithelial expansion and elongation can emerge from explicitly specified subcellular actomyosin dynamics, without imposing tissue-level growth or mechanical rules.
+  - Together these studies show tissue-scale organiation can arise without imposing boundaries or target shapes, when cells sense and reshape their microenvironment.
 
-- **Berkhout et al. — In silico prediction of neural tube closure defects** [[berkhout_2025_computationaldynamicsystems]]
-  - **Model:** Multiscale Cellular Potts / agent-based model of neural tube closure with an embedded gene regulatory network and diffusive morphogen gradients.
-  - This paper shows that successful neural tube closure (and specific defect phenotypes) can emerge from imposed cross-scale coupling between morphogen signaling, intracellular regulatory logic, and mechanically implemented cell behaviors.
-  - The model supports probabilistic prediction of neural tube defects under synthetic gene perturbations, it presents multiscale modeling as a mechanistic bridge between gene-level disruption and morphogenetic failure.
+- Multiscale models can connect subcellular force-generation rules to emergent cell and tissue mechanics
+
+  - **Venturini & Sáez — A multiscale clutch model for adhesion complex mechanics** [[paper_notes_short/venturini_2023_multiscaleclutchadhesion]]
+    - Subcellular mechanochemical model. Shows cell-scale traction emerges from molecular-scale force-transmission assumptions.
+
+  - **Li et al - Basal actomyosin pulses expand epithelium coordinating cell flattening and tissue elongation** [[li_2024_basalactomyosinpulses]]
+    - Vertex model + subcellular activity rules. Shows tissue elongation can emerge from pulsatile cytoskeletal dynamics coupled to adhesion and growth.
+
+  - Together, these studies show how tissue-relevant mechanical behaviors can be explained by explicitly imposed molecular or subcellular dynamics.
+
+- Multiscale models can be used as predictive “failure detectors” for developmental defects.
+
+  - **Berkhout et al. — In silico prediction of neural tube closure defects** [[berkhout_2025_computationaldynamicsystems]]
+    - CMP + dynamic gene regulatory networks in cells. Shows how multiscale coupling enables prediction of when neural tube closure fails, not just how it proceeds.
+
+Throughline: These studies show how, by encoding local biochemical and mechanical interaction rules and assumptions, multiscale models can function as an in silico test bed to ask what tissue-scale organization is possible or impossible under those assumptions.
 
 ---
 
 ### 2.2 Tissue shape can emerge when models impose spatial rules for cell–cell interaction
 
-In these models, the imposed dynamics are the structure of cell interactions across space. The model encodes how cells are coupled to one another, while local cell responses and morphology emerge from that coupling.
+In these models, the imposed dynamics are the structure of cell interactions across space. The model encodes how cells are coupled to one another. Tissue-scale patterning emerges from the architecture of coupling.
 
-- **Manicka et al. — Bioelectric information integration in morphogenesis** [[paper_notes_short/manicka_2023_informationintegrationbioelectric]]
-  - **Model:** Multiscale ODE model of bioelectric patterning with spatially coupled membrane voltage states.
-  - This paper shows that morphogenetic outcomes depend on how cells interpret tissue-wide bioelectric patterns rather than absolute local voltages.
-    - Cells respond to relative voltage differences, spatial gradients, and pattern-wide context.
-    - Perturbations that preserve local voltages but alter spatial organization produce distinct developmental outcomes.
-  - Shape arises because cells decode distributed electrical patterns that persist despite local variability (authors present the regulation of smaller scales by dynamics at larger scales as a mechanism for getting robust development in noisy environments).
+- Multiscale models can test whether tissue-scale outcomes require pattern-level context, or can be explained by strictly local coupling.
 
-- **Berkemeier & Page — Coupling dynamics of 2D Notch–Delta signaling** [[paper_notes_short/berkemeier_2023_couplingdynamics2d]]
-  - **Model:** Deterministic ODEs for Notch–Delta signaling on spatial lattices with varying coupling structure.
-  - This paper demonstrates that emergent tissue patterns are governed by the structure of spatial coupling between cells, not by local signaling kinetics alone.
-    - Identical intracellular dynamics yield qualitatively different outcomes under different coupling architectures.
-  - Pattern stability is determined by interaction structure across the tissue.
+  - **Lavalle et al. - Local control of cellular proliferation underlies neuroblast regeneration in zebrafish** [[lavalle_2026_localcontrolcellular]]
+    - Shows that organ-scale (neuromast) regeneration can be reproduced using only local neighbor-dependent proliferation rules, without introducing a global control signal
 
-- **Urcun et al. — Contact inhibition of locomotion in fibroblast scratch assays** [[urcun_2026_simplecellularpotts]]
-  - **Model:** Cellular Potts model imposing contact-dependent interaction and motility rules calibrated to scratch assay data.
-  - This paper shows that collective wound closure dynamics can be explained by explicitly specified rules governing how cells respond to contact with neighbors.
-    - The model encodes contact inhibition of locomotion (CIL) as a surface-dependent interaction rule that modulates cell motility.
-    - Cell shape, migration trajectories, and wound closure rates emerge from these imposed cell–cell interaction rules.
-    - Loss of CIL is sufficient to reproduce pathological keloid-like migration behavior without introducing new cellular mechanisms.
-  - Pathological tissue-scale behavior thus emerges from altered coordination rules at the level of cell–cell interactions, rather than from changes in intrinsic cell motility or tissue mechanics.
+  - **Manicka et al. — Bioelectric information integration in morphogenesis** [[paper_notes_short/manicka_2023_informationintegrationbioelectric]]
+    - Shows that a tissue can, in principle, map multicellular voltage patterns to distinct gene-expression outputs, suggesting a plausible route by which tissue-level bioelectric context could be interpreted during development.
 
-- **Lavalle et al. - Local control of cellular proliferation underlies neuroblast regeneration in zebrafish**
-  - **Model:** Minimal 2D Cellular Potts Model of neuromast regeneration with local, cell-type–specific proliferation switches.
-  - This paper shows that organ-scale regeneration and homeostasis can emerge from strictly local cell–cell interactions, without global regulatory signals.
+  - Together, these studies illustrate that both local interaction rules and distributed tissue-level patterns can be sufficient organizing substrates in multiscale models.
 
-- **Tikka et al. — Nephron progenitor movement and aggregation during kidney organogenesis**
-  - Model: 3D Cellular Potts model of nephron progenitor (NP) and metanephric mesenchyme (MM) cells around branching ureteric bud (UB) geometry, with chemotaxis and differential adhesion.  ￼
-  - This paper shows that niche-localized aggregation and directed progenitor trafficking can emerge from imposed spatial interaction rules—specifically, chemoattractant source structure and adhesion differences—without prescribing aggregate geometry.
+- Multiscale models can reveal how emergent tissue patterns depend on the geometry and range of cell coupling.
+
+  - **Berkemeier & Page — Coupling dynamics of 2D Notch–Delta signaling** [[paper_notes_short/berkemeier_2023_couplingdynamics2d]]
+    - Shows that changing coupling architecture alone can switch tissue-scale pattern outcomes.
+
+  - **Tikka et al. — Nephron progenitor movement and aggregation during kidney organogenesis** [[tikka_2022_computationalmodellingnephron]]
+    - Shows that nephron progenitor aggregation can emerge when cells follow locally defined migration and adhesion rules that depend on nearby neighbors and contact structure, rather than from an imposed target aggregate shape.
+
+- Multiscale models can explain pathological tissue-scale behavior as an emergent consequence of altered interaction rules.
+
+  - **Urcun et al. — Contact inhibition of locomotion in fibroblast scratch assays** [[urcun_2026_simplecellularpotts]]
+    - Shows that scar-like closure dynamics can emerge from disrupting contact-dependent coupling rules, without requiring new intrinsic motility programs.
+
+Throughline: These studies show how multiscale models can be used to test which forms of spatial coupling are sufficient to produce coordinated tissue outcomes, and how tissue-scale organization can fail when coupling rules are altered.
 
 ---
 
