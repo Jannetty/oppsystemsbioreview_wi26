@@ -201,7 +201,7 @@ In these models, the primary assumptions are encoded in how cells sense, reshape
 
 ### 4.2 Pathology can emerge when models disrupt imposed cell-state logic and fate transitions
 
-In these models, cell state rules dictating cell behaviors are imposed along with criteria that specifies when a cell enters a certain state. These models enable analysis of how disrupting these state transitions impacts emergent tissue health
+In these models, the primary assumptions are the rules that govern when cells enter, remain in, or exit functional states (e.g., senescent, proliferative, apoptotic, reparative). These models enable causal tests of how mis-timed or mis-triggered state transitions propagate upward to produce tissue-scale failure.
 
 - **Chandrasegaran et al. — Senescence in wound healing** [[chandrasegaran_2024_senescencewoundhealing]]
   - **Model:** Hybrid agent-based model of wound healing with senescent cell states coupled to tissue-level repair dynamics.
@@ -209,25 +209,20 @@ In these models, cell state rules dictating cell behaviors are imposed along wit
 
 - **Martin et al. — Modelling the dynamics of senescence spread**
   - Model: Minimal mathematical model + stochastic spatial simulation of senescence spread via diffusive SASP ligands and contact-dependent juxtacrine signaling.
-- This paper shows that senescence can either spread or self-limit depending on the imposed rules for cell–signal coupling.
+  - This paper shows that tissue-scale senescence can either spread or self-limit depending on the imposed logic linking local signaling exposure to state transitions into primary and secondary senescence.
 
 - **Siegel et al. — Proliferation and regeneration of the healthy human urothelium**
   - **Model:** Multiscale Cellular Potts / GGH model of urothelial regeneration and homeostasis
-  - This paper shows that stable epithelial regeneration and long-term homeostasis depend strongly on the imposed logic of cell state transitions, rather than on any single physical parameter.
-    - The model explicitly encodes 16 alternative hypotheses for progenitor and basal cell division (stem-cell-like vs population asymmetry) and for differentiation triggers (including contact-dependent differentiation).
-    - Tissue-scale outcomes—including stable stratification, chaotic layering, overgrowth, or atrophy—emerge from how these imposed fate rules interact with tissue turnover processes such as apoptosis and voiding.
-  - The study highlights that multiple rule sets can produce realistic short-term wound closure, but only a narrow subset produces long-term homeostatic stability.
+  - This paper shows that long-term epithelial homeostasis depends strongly on the assumed logic of division and differentiation state transitions. Many fate-rule hypotheses can match short-term wound closure but only a narrow subset supports stable long-term stratification.
 
 - **Haga et al. - Feedback-driven bistability in TGF-β signaling underlies skin aging**
   - **Model:** ODE model of TGF-β/VEGF signaling
-  - This paper shows that cellular senescence can emerge from imposed intracellular signaling logic that creates irreversible state transitions rather than from cumulative damage alone
-    - ODE model of feedback system is bistable
-  - Aging emerges from misaligned signal-response dynamics within cells
+  - This paper shows that senescence-like irreversible cell-state commitment can emerge from imposed intracellular regulatory logic that creates bistable switching, rather than from gradual accumulation of damage alone.
 
 - **Weatherley et al. — Therapeutic targeting of oligodendrocytes in an agent-based model of multiple sclerosis**
   - **Model:** Spatial on-lattice agent-based model of MS lesion formation incorporating immune infiltration across a blood–brain barrier, myelin damage/repair dynamics, and oligodendrocyte stress-response state transitions.
-  - This paper shows that chronic lesion growth and failed recovery can emerge from imposed state-transition thresholds governing when oligodendrocytes stop remyelinating and undergo apoptosis, even when immune attack dynamics remain unchanged.
-  - THIS PAPER DOES NOT EXPLICITELY DISCUSS AGING! And MS is not necessarily an aging related disease. Idk if we should include.
+  - This paper shows that chronic lesion expansion and failed recovery can emerge from imposed thresholds governing oligodendrocyte fate transitions, even when immune attack dynamics are unchanged.
+  - THIS PAPER IS NOT ABOUT AGING but about MS. Consider cutting.
 
 ---
 
@@ -243,5 +238,5 @@ In these models, rules determining which cells persist in a population are impos
 
 ### Section synthesis: Aging reflects multiscale desynchronization rather than new biology
 
-- Across these models, aging and senescence emerge as failures of coordination across scales rather than as the appearance of novel mechanisms.
+- Across these models, aging and senescence (pathology) emerge as failures of coordination across scales rather than as the appearance of novel mechanisms.
 - These studies help explain why many single-target interventions fail: tissue-scale outcomes reflect integrated, spatiotemporally coordinated dynamics that cannot be corrected by modifying individual components in isolation.
