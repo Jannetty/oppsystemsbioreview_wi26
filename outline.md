@@ -99,37 +99,36 @@ Throughline: These studies show how multiscale models can be used to test which 
 
 ### 2.3 Tissue shape can emerge when models impose tissue-scale physical dynamics
 
-In these models, the imposed dynamics are physical properties imposed at the tissue scale through laws governing growth, geometry, and mechanics. Cellular behaviors are abstracted or omitted, and morphology emerges from collective physical processes.
+In these models, the primary assumptions are encoded at the scale of tissues: growth laws, geometry, material properties, and mechanical constraints. Cells may be absent, simplified, or treated as materials. Tissue morphology then emerges as a consequence of physical dynamics operating over space and time.
 
-- **Gill et al. — Divergent buckling patterns in gut morphogenesis** [[gill_2024_developmentalmechanicsdivergent]]
-  - **Model:** Continuum mechanical model of growing tissue without explicit cellular representation.
-  - This paper shows that distinct, robust organ-scale patterns arise through growth–geometry feedback that selects between buckling regimes.
-    - The same growth processes yield different morphologies depending on tissue geometry and resulting tissue mechanical properties.
-  - Stable shape reflects convergence onto a particular tissue-scale dynamical mode.
+- Multiscale models can show that tissue-scale mechanics can be sufficient to drive robust morphogenetic outcomes.
 
-- **De Santis et al. — Crosstalk between tissue mechanics and morphogen signaling** [[desantis_2025_crosstalktissuemechanics]]
-  - **Model:** Multiscale model coupling morphogen signaling with tissue geometry and tension during gastrulation.
-  - This work shows that tissue shape and mechanical state actively regulate how morphogen signals are interpreted.
+  - **Gill et al. — Divergent buckling patterns in gut morphogenesis** [[gill_2024_developmentalmechanicsdivergent]]
+    - Shows that distinct organ-scale morphologies can emerge from the same growth program when tissue geometry and mechanical constraints place the system into different buckling regimes.
 
-- **Duteil et al. — Signaling on evolving tissue geometries** [[duteil_2025_computationalframeworkstudy]]
-  - **Model:** Reaction–diffusion equations defined on deforming tissue surfaces.
-  - This study demonstrates that evolving geometry alone can modulate signaling outcomes, even in the absence of explicit cell-based models.
-  - Signal interpretation depends on the history of tissue deformation.
+- Multiscale models can treat tissue geometry as an active regulator of signaling rather than a passive outcome of signaling.
 
-- **Gomez et al. — Highly dynamic mechanical transitions in embryonic cell populations during Drosophila gastrulation**
-  - **Model:** Physical model (implemented in a Cellular Potts framework) testing how spatially localized and time-varying cell stiffness affects ventral furrow formation.
-  - This paper shows that tissue folding depends on rapid, spatially patterned changes in cell material properties, and that correctly timed stiffness dynamics are required for robust gastrulation-scale morphology.
+  - **Duteil et al. — Signaling on evolving tissue geometries** [[duteil_2025_computationalframeworkstudy]]
+    - Shows that morphogen patterning outcomes chhanges when signaling unfolds on a deforming tissue surface, even when biochemical rules are unchanged.
 
-- **Fruleux et al. — Growth couples temporal and spatial fluctuations of tissue properties during morphogenesis** [[fruleux_2024_growthcouplestemporal]]
-  - **Model:** Minimal stochastic tissue-growth field model combining growth-driven advection, temporal persistence (“memory”), and noise; tested against live-imaging data OF ARABIDOPSIS (I still think the core takeaway of the paper is system agnostic but the data they compare with is in plants so might be worth excluding this one too).
-  - This paper shows that long-range spatial correlations in tissue growth can emerge from imposed tissue-scale growth dynamics that convert temporal persistence into spatial structure.
+  - **De Santis et al. — Crosstalk between tissue mechanics and morphogen signaling** [[desantis_2025_crosstalktissuemechanics]]
+    - Shows that morphogen interpretation depends on tissue mechanical state, so signaling-only models fail when geometry and tension are omitted.
+
+- Multiscale models can test whether correct morphogenesis requires time-resolved mechanical programs, not just static material assumptions.
+
+  - **Gomez et al. — Highly dynamic mechanical transitions in embryonic cell populations during Drosophila gastrulation**
+    - Shows that robust tissue folding depends on spatially localized, time-varying changes in cell/tissue material properties, meaning that timing of mechanical transitions can be a controlling variable.
+
+- Multiscale models can reveal that tissue-scale growth dynamics can generate long-range structure without explicitly encoding long-range coordination.
+
+  - **Fruleux et al. — Growth couples temporal and spatial fluctuations of tissue properties during morphogenesis** [[fruleux_2024_growthcouplestemporal]]
+    - Shows that long-range spatial correlations in tissue growth can emerge from tissue-scale growth dynamics that convert temporal persistence into spatial structure.
 
 ---
 
 ### Section synthesis: Multiscale models enable the study of morphogenesis across organizational scales
 
-- These studies show that multiscale modeling provides a common framework for studying morphogenesis, regardless of whether the primary organizing dynamics are specified at the molecular, cellular, or tissue scale.
-- By explicitly representing interactions across scales, multiscale models make it possible to compare systems with very different assumed dynamics and to analyze how tissue-level shape emerges from those assumptions through coordinated cross-scale interactions.
+- Conclusion
 
 ---
 
