@@ -132,7 +132,7 @@ In these models, the primary assumptions are encoded at the scale of tissues: gr
 
 ---
 
-## 3. Gynopatholody: A high-impact area of opportunity for spatiotemporal modeling.
+## 3. Gynopatholody: A high-impact area of opportunity for spatiotemporal modeling
 
 - Spatial and temporal dynamics are increasingly recognized as central to the development and progression of gynopathologies such as endometriosis and ovarian cancer.
   - Experimental spatial “omics” data are being generated to study these pathologies ([Nature Comms review], DOI:10.1038/s41467-025-67492-z; DOI:10.1038/s41467-022-28568-2)
@@ -157,43 +157,38 @@ Gynopathology modeling is a high-impact opportunity for modeling researchers.
 
 ## 4. Senescence & Chronic Disease: Pathology Emerges from Multiscale Desynchronization
 
-- This review focuses on spatiotemporal models to study cellular effects of senescence and aging on health. Readers looking for a review of non-spatial network models and dynamical models can consult Su and Hao 2024.
-
-- In senescence-associated and chronic diseases, biological processes that are individually functional can become pathological when their coordination across time, space, interactions, or population structure breaks down.
-- In computational models, these forms of coordination must be explicitly specified in order to study how their disruption gives rise to disease. Aging phenotypes then emerge from how coordination disruptions propagate across biological scales.
+- This section focuses on spatiotemporal models to study cellular effects of senescence and aging on health. Readers looking for a review of non-spatial network models and dynamical models can consult Su and Hao 2024.
+- In senescence-associated and chronic diseases, biological processes can become pathological when their coordination across time, space, interactions, or population structure breaks down.
+- In computational models, these forms of coordination must be explicitly specified in order to study how their disruption gives rise to disease. Pathological phenotypes then emerge from how coordination disruptions propagate across biological scales.
 - The studies in this section use multiscale modeling to address a central question:
   **What coordination disruptions can cause senescence-like or chronic pathology, and how do those disruptions propagate across the system?**
-- As in the morphogenesis section, we organize these models by the **scale at which the disrupted coordinating dynamics are imposed**.
+- As in the morphogenesis section, we organize these models by the scale at which the disrupted coordinating dynamics are imposed.
 
 ### 4.1 Pathology can emerge when models disrupt imposed cell–microenvironment coupling
 
-In these models, the primary assumptions are encoded in how cells sense, reshape, and mechanically interact with their local environment. The “microenvironment” may be extracellular (diffusible signals, ECM, tissue geometry) or intracellular (organelle structure and spatial transport). Pathology emerges when cell–microenvironment coupling rules are altered.
+In these models, models impose how cells sense, reshape, and mechanically interact with their local environment. The “microenvironment” may be extracellular (diffusible signals, ECM, tissue geometry) or intracellular (organelle structure and spatial transport). Pathology emerges when cell–microenvironment coupling rules are altered.
 
-- **Khan et al. — Stochastic co-translational targeting drives mitochondrial protein heterogeneity in senescence**
+- **Khan et al. — Stochastic co-translational targeting drives mitochondrial protein heterogeneity in senescence** [[khan_2024_mitochondrialproteinheterogeneity]]
   - **Model:** Stochastic kinetics + diffusion model coupling mRNA localization, protein targeting, and mitochondrial fragmentation.
   - This paper shows that senescence-associated mitochondrial dysfunction can emerge when mitochondrial fragmentation disrupts coordination between stochastic protein delivery and organelle-scale geometry, producing heterogeneous protein composition across fragments rather than stable mitochondrial stoichiometry.
 
-- **Weathered et al. — Microglial control of amyloid plaque dynamics** [[weathered_2024_microglialrolesalzheimers]]
+- **Weathered et al. — Microglial control of amyloid plaque dynamics** [[paper_notes_short/weathered_2024_microglialrolesalzheimers]]
   - **Model:** Spatial agent-based model of microglial behavior coupled to diffusive and aggregating Aβ species.
   - This paper shows that immune effectiveness in Alzheimer’s disease depends on the spatial and temporal coordination of microglial actions relative to plaque growth.
 
-- **Thapa et al. - Senescent mesothelial matrix promotes ovarian cancer colonization**
+- **Thapa et al. - Senescent mesothelial matrix promotes ovarian cancer colonization** [[thapa_2024_senescentmesothelialmatrix]]
   - **Model:** Multiscale CPM of mesothelial-cancer cell interactions coupled to experimentally measured changes in extracellular matrix composition.
   - This paper shows that age- or therapy-induced senescence can prime metastatic colonization by altering cell–ECM interaction rules (adhesion and invasion permissiveness).
 
-- **Khuu & McCulloch — Multicell modeling of the skeletal muscle microenvironment**
-  - **Model:** 3D multi-cell model in CompuCell3D of satellite cell recruitment to injury, with imposed HGF secretion from damaged tissue.
-  - This paper shows that age-related decline in muscle repair can emerge from weakened coupling between injury-derived growth factor signaling and satellite-cell recruitment dynamics, even when the intrinsic repair program of the cells is unchanged.
-
-- **Haase et al. — Multiscale cytokine interactions in muscle regeneration** [[haase_2024_multiscale_cytokines_muscle]]
+- **Haase et al. — Multiscale cytokine interactions in muscle regeneration** [[paper_notes_short/haase_2024_multiscale_cytokines_muscle]]
   - **Model:** Multiscale Cellular Potts Model coupled to spatially resolved cytokine fields and vascular remodeling.
   - This paper shows that regeneration outcomes depend on the spatiotemporal interaction structure among cytokines, meaning tissue-scale repair cannot be predicted from the behavior of individual signals in isolation.
 
-- **Li et al. — How the spleen reshapes and retains young and old red blood cells**
+- **Li et al. — How the spleen reshapes and retains young and old red blood cells** [[li_2021_howspleenreshapes]]
   - **Model:** Multiscale, particle-based mechanical model of red blood cells traversing spleen.
   - This paper shows that red blood cell aging and clearance can emerge from purely mechanical cell–environment coupling: age-associated changes in cell geometry become incompatible with fixed splenic constraints, producing retention and lysis without requiring an explicit molecular damage-sensing program.
 
-- **Lazebnik & Friedman _ Spatio-temporal modeling of senescence-aware combination therapy in metastatic prostate cancer**
+- **Lazebnik & Friedman _ Spatio-temporal modeling of senescence-aware combination therapy in metastatic prostate cancer** [[lazebnik_2025_spatiotemporalmodelcombining]]
   - **Model:** PDE coupling tumor cell populations, senescent cells, immune dynamics, angiogenesis and drug pharmacokinetics
   - This paper shows that therapy-induced senescence can destabilize tumor control by reshaping the tissue microenvironment over time, producing resistance and accelerated progression through cross-scale feedback rather than tumor-intrinsic growth changes alone.
 
@@ -203,23 +198,19 @@ In these models, the primary assumptions are encoded in how cells sense, reshape
 
 In these models, the primary assumptions are the rules that govern when cells enter, remain in, or exit functional states (e.g., senescent, proliferative, apoptotic, reparative). These models enable causal tests of how mis-timed or mis-triggered state transitions propagate upward to produce tissue-scale failure.
 
-- **Chandrasegaran et al. — Senescence in wound healing** [[chandrasegaran_2024_senescencewoundhealing]]
+- **Chandrasegaran et al. — Senescence in wound healing** [[paper_notes_short/chandrasegaran_2024_senescencewoundhealing]]
   - **Model:** Hybrid agent-based model of wound healing with senescent cell states coupled to tissue-level repair dynamics.
   - This paper shows that senescence can either promote regeneration or drive pathological outcomes depending on when and where senescent cells arise.
 
-- **Martin et al. — Modelling the dynamics of senescence spread**
+- **Martin et al. — Modelling the dynamics of senescence spread** [[martin_2023_modellingdynamicssenescence]]
   - Model: Minimal mathematical model + stochastic spatial simulation of senescence spread via diffusive SASP ligands and contact-dependent juxtacrine signaling.
   - This paper shows that tissue-scale senescence can either spread or self-limit depending on the imposed logic linking local signaling exposure to state transitions into primary and secondary senescence.
 
-- **Siegel et al. — Proliferation and regeneration of the healthy human urothelium**
+- **Siegel et al. — Proliferation and regeneration of the healthy human urothelium** [[paper_notes_short/siegel_2025_proliferationregenerationhealthy]]
   - **Model:** Multiscale Cellular Potts / GGH model of urothelial regeneration and homeostasis
   - This paper shows that long-term epithelial homeostasis depends strongly on the assumed logic of division and differentiation state transitions. Many fate-rule hypotheses can match short-term wound closure but only a narrow subset supports stable long-term stratification.
 
-- **Haga et al. - Feedback-driven bistability in TGF-β signaling underlies skin aging**
-  - **Model:** ODE model of TGF-β/VEGF signaling
-  - This paper shows that senescence-like irreversible cell-state commitment can emerge from imposed intracellular regulatory logic that creates bistable switching, rather than from gradual accumulation of damage alone.
-
-- **Weatherley et al. — Therapeutic targeting of oligodendrocytes in an agent-based model of multiple sclerosis**
+- **Weatherley et al. — Therapeutic targeting of oligodendrocytes in an agent-based model of multiple sclerosis** [[weatherley_2026_therapeutictargetingoligodendrocytes]]
   - **Model:** Spatial on-lattice agent-based model of MS lesion formation incorporating immune infiltration across a blood–brain barrier, myelin damage/repair dynamics, and oligodendrocyte stress-response state transitions.
   - This paper shows that chronic lesion expansion and failed recovery can emerge from imposed thresholds governing oligodendrocyte fate transitions, even when immune attack dynamics are unchanged.
   - THIS PAPER IS NOT ABOUT AGING but about MS. Consider cutting.
@@ -230,7 +221,7 @@ In these models, the primary assumptions are the rules that govern when cells en
 
 In these models, rules determining which cells persist in a population are imposed. These models enable analysis of the emergent consequences of cell persistence regemes in the context of aging tissue.
 
-- **Rat et al. — Telomere-driven senescence in yeast** [[rat2025_telomere_senescence]]
+- **Rat et al. — Telomere-driven senescence in yeast** [[paper_notes_short/rat2025_telomere_senescence]]
   - **Model:** Stochastic, lineage-resolved population model linking telomere dynamics to cellular fate decisions and population growth.
   - This paper shows that replicative senescence emerges from misalignment across intracellular, cellular, and population scales, rather than from a single molecular trigger.
 
