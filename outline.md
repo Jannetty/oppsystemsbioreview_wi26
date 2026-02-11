@@ -5,7 +5,7 @@
 ## 1. Introduction
 
 - Healthy tissues emerge from coordinated activity across scales of biological organization
-  - subcellular signaling, cellular behaviors, and tissue structure continuously interact, shaping one another's dynamics
+  - Subcellular signaling, cellular behaviors, and tissue structure continuously interact, shaping one another's dynamics
 - Establishing this coordination during development and maintaining it over time is essential for sustained tissue health
   - Many pathologies arise from breakdowns in coordination like mistimed signaling, mislocalized spatial cues, or improper integration of otherwise normal processes
 - Experimental approaches face fundamental limits in studying regulation and misregulation across scales.
@@ -35,9 +35,9 @@
 
 ### 2.1 Tissue shape can emerge when models impose cell–microenvironment interaction rules
 
-In these models, the primary assumptions are encoded at the scale of individual cells interacting with local biochemical or mechanical context (intracellular cues, extracellular cues, ECM, or force subcellular transmission). Tissue-scale shape is then treated as an emergent consequence of these local rules.
+In these models, the primary assumptions are encoded at the scale of individual cells interacting with local biochemical or mechanical context (intracellular cues, extracellular cues, ECM, or force subcellular transmission). Tissue-scale shape is an emergent consequence of these local rules.
 
-- Multiscale models can replace externally imposed tissue constraints with mechanistic local interactions.
+- Multiscale models can identify local interaction rules that are sufficient to generate tissue-scale structure.
 
   - **Johnson et al. — CNCC stream confinement** [johnson_2025_streamconfinementneuralcrestcells](paper_notes_short/johnson_2025_streamconfinementneuralcrestcells.md)
     - ABM + PDE fields. Shows stream confinement can emerge from local cue–cell feedbacks without artificial boundaries.
@@ -45,7 +45,7 @@ In these models, the primary assumptions are encoded at the scale of individual 
   - **Kaity & Lobo — Emergent stable tissue shapes from morphogen–growth feedback** [kaity_2026_emergentstabletissue](paper_notes_short/kaity_2026_emergentstabletissue.md)
     - Center-based cell model + morphogen PDEs. Shows stable tissue shape can emerge from reciprocal coupling between growth and patterning.
 
-  - Together these studies show tissue-scale organiation can arise without imposing boundaries or target shapes, when cells sense and reshape their microenvironment.
+  - Together these studies show that when cells dynamically reshape the cues they respond to, tissue-level confinement and stable morphology can emerge as a self-organized consequence of feedback.
 
 - Multiscale models can connect subcellular force-generation rules to emergent cell and tissue mechanics
 
@@ -132,7 +132,7 @@ In these models, the primary assumptions are encoded at the scale of tissues: gr
 
 ---
 
-## 3. Gynopatholody: A high-impact area of opportunity for spatiotemporal modeling
+## 3. Gynopathology: A high-impact area of opportunity for spatiotemporal modeling
 
 - Spatial and temporal dynamics are increasingly recognized as central to the development and progression of gynopathologies such as endometriosis and ovarian cancer.
   - Experimental spatial “omics” data are being generated to study these pathologies ([Nature Comms review], DOI:10.1038/s41467-025-67492-z; DOI:10.1038/s41467-022-28568-2)
