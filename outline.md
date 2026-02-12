@@ -93,6 +93,9 @@ In these models, the imposed dynamics are the structure of cell interactions acr
   - **Urcun et al. — Contact inhibition of locomotion in fibroblast scratch assays** [urcun_2026_simplecellularpotts](paper_notes_short/urcun_2026_simplecellularpotts.md)
     - Shows that scar-like closure dynamics can emerge from disrupting contact-dependent coupling rules, without requiring new intrinsic motility programs.
 
+  - **de Jong et al. — Gastruloid elongation via convergent extension** [de Jong et al. — Gastruloid elongation via convergent extension](paper_notes_short/jong_2024_shapeselongatinggastruloids.md)
+    - CPM. Shows that elongating gastruloid shapes can emerge from cell–cell mechanical coupling rules, and that adhesion alone is insufficient without active crawling.
+
 Throughline: These studies show how multiscale models can be used to test which forms of spatial coupling are sufficient to produce coordinated tissue outcomes, and how tissue-scale organization can fail when coupling rules are altered.
 
 ---
